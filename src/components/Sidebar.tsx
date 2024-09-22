@@ -14,7 +14,7 @@ const Sidebar: FC<ISidebar> = ({isSidebarOpen, activeView, onViewChange}) => {
   const getActiveViewStyle = (current: number) => {
     if (activeView === current) return "bg-blue-500 hover:bg-blue-500 hover:text-white text-white";
 
-    return "";
+    return "hover:text-black text-black";
   }
 
   return (
