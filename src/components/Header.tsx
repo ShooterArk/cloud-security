@@ -16,19 +16,19 @@ const Header: FC<IHeader> = ({onToggleSideBar}) => {
       <h1 className="text-xl font-bold">Cloud Shield Secure</h1>
     </div>
     <div className="flex items-center space-x-4">
-      <Button variant="ghost" size="sm">
+      <Button variant="ghost" size="sm" className='hover:text-black text-black'>
         <Globe className="mr-2 h-4 w-4" />
         Threat Intelligence
       </Button>
-      <Button variant="ghost" size="sm">
+      <Button variant="ghost" size="sm" className='hover:text-black text-black'>
         <ExternalLink className="mr-2 h-4 w-4" />
         External Exposure Management
       </Button>
-      <Button variant="ghost" size="sm">
+      <Button variant="ghost" size="sm" className='hover:text-black text-black'>
         <Radio className="mr-2 h-4 w-4" />
         Sensors Manager
       </Button>
-      <Button variant="ghost" size="sm">
+      <Button variant="ghost" size="sm" className='hover:text-black text-black'>
         <User className="mr-2 h-4 w-4" />
         My Profile
       </Button>
