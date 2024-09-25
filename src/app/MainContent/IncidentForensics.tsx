@@ -156,7 +156,7 @@ const IncidentForensics = () => {
                   <Badge
                     variant={
                       incident.status === 'Ongoing' ? 'destructive' :
-                        incident.status === 'Contained' ? 'warning' :
+                        incident.status === 'Contained' ? 'outline' :
                           incident.status === 'Resolved' ? 'default' :
                             'secondary'
                     }

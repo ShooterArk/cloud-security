@@ -44,7 +44,7 @@ const Preferences = () => {
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
                 <Label htmlFor="dark-mode">Dark Mode</Label>
-                <Switch color='red' id="dark-mode" />
+                <Switch id="dark-mode" />
               </div>
               <div className="flex items-center justify-between">
                 <Label htmlFor="language">Language</Label>
