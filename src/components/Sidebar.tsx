@@ -57,7 +57,7 @@ const Sidebar: FC<ISidebar> = ({isSidebarOpen, activeView, onViewChange}) => {
             <Users className="mr-2 h-4 w-4" />
             Administration
           </Button>
-          <Button variant="ghost" onClick={() => onViewChange(8)} className={`w-full justify-start ${getActiveViewStyle(9)}`}>
+          <Button variant="ghost" onClick={() => onViewChange(9)} className={`w-full justify-start ${getActiveViewStyle(9)}`}>
             <Cloud className="mr-2 h-4 w-4" />
             Multi Cloud Management
           </Button>

@@ -8,6 +8,14 @@ import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recha
 import VulnerabilityManagement from './MainContent/VulnerabilityManagement'
 import SecurityCompliance from './MainContent/SecurityCompliance'
 import UnderDevelopment from './MainContent/UnderDevelopment'
+import SecurityControlsValidation from './MainContent/SecurityControlsValidation'
+import ThreatMonitoring from './MainContent/ThreatMonitoring'
+import IncidentForensics from './MainContent/IncidentForensics'
+import ZeroTrustModelAssessment from './MainContent/ZeroTrustModelAssessment'
+import Reporting from './MainContent/Reporting'
+import Preferences from './MainContent/Settings'
+import Administration from './MainContent/Administration'
+import MutliCloudManagement from './MainContent/MutliCloudManagement'
 const data = [
   { name: 'Jan', vulnerabilities: 400 },
   { name: 'Feb', vulnerabilities: 300 },
@@ -31,36 +39,30 @@ export default function Home() {
   }
 
   const getContent = () => {
-    if (activeView === 0) {
-      return <SecurityCompliance />
+    switch (activeView) {
+      case 0:
+        return <SecurityCompliance />
+      case 1:
+        return <VulnerabilityManagement />
+      case 2:
+        return <SecurityControlsValidation />
+      case 3:
+        return <ThreatMonitoring />
+      case 4:
+        return <IncidentForensics />
+      case 5:
+        return <ZeroTrustModelAssessment />
+      case 6:
+        return <Reporting />
+      case 7:
+        return <Preferences />
+      case 8:
+        return <Administration />
+      case 9:
+        return <MutliCloudManagement />;
+      default: 
+        return <UnderDevelopment />
     }
-    if (activeView === 1) {
-      return <VulnerabilityManagement />
-    }
-
-    return <UnderDevelopment />
-
-    // return (
-    //   <>
-    //     <h2 className="text-2xl font-bold mb-4">Welcome to Your Security Dashboard</h2>
-    //     <p>This is where your main content will go. You can add charts, tables, and other components related to security compliance, vulnerability management, threat monitoring, and more.</p>
-    //     <Card className="w-full h-[calc(100vh-8rem)]">
-    //       <CardHeader>
-    //         <CardTitle>Vulnerabilities Over Time</CardTitle>
-    //       </CardHeader>
-    //       <CardContent className="h-[calc(100%-5rem)]">
-    //         <ResponsiveContainer width="100%" height="100%">
-    //           <BarChart data={data}>
-    //             <XAxis dataKey="name" />
-    //             <YAxis />
-    //             <Tooltip />
-    //             <Bar dataKey="vulnerabilities" fill="#8884d8" />
-    //           </BarChart>
-    //         </ResponsiveContainer>
-    //       </CardContent>
-    //     </Card>
-    //   </>
-    // )
   }
 
   return (
