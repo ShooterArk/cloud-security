@@ -61,6 +61,22 @@ const Sidebar: FC<ISidebar> = ({isSidebarOpen, activeView, onViewChange}) => {
             <Cloud className="mr-2 h-4 w-4" />
             Multi Cloud Management
           </Button>
+          <Button variant="ghost" onClick={() => onViewChange(10)} className={`w-full justify-start ${getActiveViewStyle(10)}`}>
+            <Cloud className="mr-2 h-4 w-4" />
+            ⁠Data collection Engine
+          </Button>
+          <Button variant="ghost" onClick={() => onViewChange(11)} className={`w-full justify-start ${getActiveViewStyle(11)}`}>
+            <Cloud className="mr-2 h-4 w-4" />
+            Processing engine 
+          </Button>
+          <Button variant="ghost" onClick={() => onViewChange(12)} className={`w-full justify-start ${getActiveViewStyle(12)}`}>
+            <Cloud className="mr-2 h-4 w-4" />
+            Response engine
+          </Button>
+          <Button variant="ghost" onClick={() => onViewChange(13)} className={`w-full justify-start ${getActiveViewStyle(13)}`}>
+            <Cloud className="mr-2 h-4 w-4" />
+            Visualisation engine
+          </Button>
         </nav>
       </ScrollArea>
     </aside>

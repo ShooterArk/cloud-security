@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import Image from 'next/image';
 
 interface IHeader {
   onToggleSideBar: () => void;
@@ -19,7 +20,8 @@ const Header: FC<IHeader> = ({ onToggleSideBar }) => {
         <Button variant="ghost" size="icon" className="md:hidden mr-2" onClick={onToggleSideBar}>
           <Menu className="h-6 w-6" />
         </Button>
-        <h1 className="text-xl font-bold">Cloud Shield Secure</h1>
+        {/* <h1 className="text-xl font-bold">Cloud Shield Secure</h1> */}
+        <Image src={require('../assets/logo-bg.png')} alt="" style={{width: 72, height: 46}} />
       </div>
       <div className="flex items-center space-x-4">
         <DropdownMenu>
@@ -31,10 +33,10 @@ const Header: FC<IHeader> = ({ onToggleSideBar }) => {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem>Compute assets (Amazon, GCP,Azure,Kubernetes)</DropdownMenuItem>
-            <DropdownMenuItem>Network assets (Amazon, GCP,Azure,Kubernetes)</DropdownMenuItem>
-            <DropdownMenuItem>Storage assets (Amazon, GCP,Azure,Kubernetes)</DropdownMenuItem>
-            <DropdownMenuItem>IAM (Amazon, GCP,Azure,Kubernetes)</DropdownMenuItem>
+            <DropdownMenuItem>Compute assets</DropdownMenuItem>
+            <DropdownMenuItem>Network assets</DropdownMenuItem>
+            <DropdownMenuItem>Storage assets</DropdownMenuItem>
+            <DropdownMenuItem>IAM</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         <Button variant="ghost" size="sm" className='hover:text-black text-black'>
